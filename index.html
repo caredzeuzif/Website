@@ -3,70 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Kenzeuz Trends - Your Style, Your Statement. Trendy Fashion for the Modern Kenyan.</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Showcasing my work and skills</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <section class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>A cool web app built with HTML, CSS, and JavaScript.</p>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="Kenzeuz Trends Home">Kenzeuz Trends</a>
             </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>A responsive portfolio website for a client.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project 3</h3>
-                <p>An e-commerce platform with payment integration.</p>
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" aria-controls="shopDropdown" id="shopNavLink">Shop <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-content" id="shopDropdown" role="menu" aria-labelledby="shopNavLink">
+                            <a href="#" role="menuitem">Shop All</a>
+                            <a href="#" role="menuitem">Women's</a>
+                            <a href="#" role="menuitem">Men's</a>
+                            <a href="#" role="menuitem">New Arrivals</a>
+                            <a href="#" role="menuitem">Sale</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Open main menu" aria-controls="mainNav" aria-expanded="false">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Wishlist"><i class="fas fa-heart" aria-hidden="true"></i></a>
+                <a href="#" aria-label="User Account"><i class="fas fa-user" aria-hidden="true"></i></a>
+                <a href="#" class="cart-icon" aria-label="Shopping Cart with 0 items">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+                </a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section class="gallery">
-        <h2>My Gallery</h2>
-        <div class="gallery-container">
-            <img src="gallery/image1.jpg">
-            <img src="gallery/image2.jpg">
-            <img src="gallery/image3.jp">
+    <main id="main-content">
+        <section class="hero-section">
+            <h2 class="sr-only">Kenzeuz Trends Featured Collections</h2> <div class="hero-slider" id="heroSlider">
+                <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                    <img src="https://via.placeholder.com/1600x700/00796B/FFFFFF?text=Trendy+Fashion+for+Her" alt="Vibrant woman in trendy fashion, showcasing Kenzeuz Trends women's collection.">
+                    <div class="slide-content">
+                        <h1>Discover Your Signature Look</h1>
+                        <p>Where Fashion Meets Identity. Explore our exclusive Women's Collection.</p>
+                        <a href="#" class="btn primary-btn">Shop Women's</a>
+                    </div>
                 </div>
-    </section>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                    <img src="https://via.placeholder.com/1600x700/E67E22/FFFFFF?text=Urban+Edge+for+Him" alt="Stylish man in urban attire, representing Kenzeuz Trends men's collection.">
+                    <div class="slide-content">
+                        <h1>Define Your Urban Edge</h1>
+                        <p>Bold styles and comfortable fits for the modern Kenyan man.</p>
+                        <a href="#" class="btn primary-btn">Shop Men's</a>
+                    </div>
+                </div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                    <img src="https://via.placeholder.com/1600x700/FFD700/333333?text=New+Arrivals+Daily" alt="Various new clothing items displayed on hangers, highlighting daily new arrivals.">
+                    <div class="slide-content">
+                        <h1>Fresh Styles Dropping Daily</h1>
+                        <p>Be the first to wear the latest trends.</p>
+                        <a href="#" class="btn primary-btn">Explore New Arrivals</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots" role="tablist" aria-label="Hero Slider Navigation"></div>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send</button>
-        </form>
-    </section>
+        <section class="featured-categories section-padding">
+            <h2>Shop Our Top Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="https://via.placeholder.com/400x300/A9A9A9/FFFFFF?text=Dresses" alt="Elegant dress on a mannequin.">
+                    <h3>Dresses</h3>
+                    <a href="#" class="btn secondary-btn">View Collection <span class="sr-only">of Dresses</span></a>
+                </div>
+                <div class="category-item">
+                    <img src="https://via.placeholder.com/400x300/C0C0C0/FFFFFF?text=Tops" alt="Stylish tops and blouses arranged neatly.">
+                    <h3>Tops & Blouses</h3>
+                    <a href="#" class="btn secondary-btn">View Collection <span class="sr-only">of Tops & Blouses</span></a>
+                </div>
+                <div class="category-item">
+                    <img src="https://via.placeholder.com/400x300/D3D3D3/FFFFFF?text=Trousers" alt="Variety of trousers and jeans folded.">
+                    <h3>Trousers & Jeans</h3>
+                    <a href="#" class="btn secondary-btn">View Collection <span class="sr-only">of Trousers & Jeans</span></a>
+                </div>
+                <div class="category-item">
+                    <img src="https://via.placeholder.com/400x300/DCDCDC/FFFFFF?text=Accessories" alt="Close-up of fashion accessories like jewelry and handbags.">
+                    <h3>Accessories</h3>
+                    <a href="#" class="btn secondary-btn">View Collection <span class="sr-only">of Accessories</span></a>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2025 My Portfolio. All rights reserved.</p>
-    </footer>
+        <section class="new-arrivals section-padding">
+            <h2>Fresh Off The Rack</h2>
+            <div class="product-grid">
+                <div class="product-card" role="article" aria-labelledby="product1Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/808080/FFFFFF?text=New+Dress+1" alt="Image of a Chic Midi Dress">
+                    </a>
+                    <h3 id="product1Title">Chic Midi Dress</h3>
+                    <p class="price">KSh 4,500</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Chic Midi Dress to cart">Add to Cart</button>
+                </div>
+                <div class="product-card" role="article" aria-labelledby="product2Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/A9A9A9/FFFFFF?text=Men's+Shirt+1" alt="Image of a Classic Linen Shirt">
+                    </a>
+                    <h3 id="product2Title">Classic Linen Shirt</h3>
+                    <p class="price">KSh 2,800</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Classic Linen Shirt to cart">Add to Cart</button>
+                </div>
+                <div class="product-card" role="article" aria-labelledby="product3Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/C0C0C0/FFFFFF?text=Jumpsuit+1" alt="Image of an Elegant Jumpsuit">
+                    </a>
+                    <h3 id="product3Title">Elegant Jumpsuit</h3>
+                    <p class="price">KSh 5,200</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Elegant Jumpsuit to cart">Add to Cart</button>
+                </div>
+                <div class="product-card" role="article" aria-labelledby="product4Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/D3D3D3/FFFFFF?text=Trouser+1" alt="Image of Slim Fit Chinos">
+                    </a>
+                    <h3 id="product4Title">Slim Fit Chinos</h3>
+                    <p class="price">KSh 3,500</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Slim Fit Chinos to cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn primary-btn large-btn">View All New Arrivals</a>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <section class="promo-banner section-padding">
+            <img src="https://via.placeholder.com/1200x400/005F55/FFFFFF?text=Experience+Safari+Chic" alt="Model wearing a stylish outfit from the Safari Chic collection, against a scenic Kenyan backdrop.">
+            <div class="promo-content">
+                <h2>Experience Safari Chic</h2>
+                <p>Our exclusive collection inspired by the beauty of the Kenyan landscape.</p>
+                <a href="#" class="btn white-btn">Shop Safari Chic</a>
+            </div>
+        </section>
+
+        <section class="testimonials section-padding">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item" role="region" aria-label="Customer Testimonial from Sarah W.">
+                    <p class="quote">"Kenzeuz Trends is my go-to for stylish and comfortable clothes. The quality is amazing, and delivery to Kisumu is always fast!"</p>
+                    <p class="author">- Sarah W., Kisumu</p>
+                    <div class="stars" role="img" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                </div>
+                <div class="testimonial-item" role="region" aria-label="Customer Testimonial from Alex N.">
+                    <p class="quote">"Finally, a brand that truly understands modern Kenyan fashion. Their new collection is fire!"</p>
+                    <p class="author">- Alex N., Nairobi</p>
+                    <div class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+                <div class="testimonial-item" role="region" aria-label="Customer Testimonial from Fatma A.">
+                    <p class="quote">"I love how unique their pieces are. Always get compliments when I wear Kenzeuz Trends. Great customer service too."</p>
+                    <p class="author">- Fatma A., Mombasa</p>
+                    <div class="stars" role="img" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup section-padding text-center">
+            <h2>Join the Kenzeuz Tribe</h2>
+            <p>Sign up for our newsletter to get exclusive deals, style tips, and early access to new collections!</p>
+            <form class="newsletter-form" aria-label="Newsletter Subscription Form">
+                <label for="newsletterEmail" class="sr-only">Your email address</label>
+                <input type="email" id="newsletterEmail" placeholder="Your email address" required autocomplete="email">
+                <button type="submit" class="btn primary-btn">Subscribe</button>
+            </form>
+        </section>
+
+        <section class="why-choose-us section-padding">
+            <h2>Why Choose Kenzeuz Trends?</h2>
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <i class="fas fa-gem icon-large" aria-hidden="true"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Hand-picked fabrics and meticulous craftsmanship ensure lasting comfort and style.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-truck icon-large" aria-hidden="true"></i>
+                    <h3>Fast & Reliable Delivery</h3>
+                    <p>From Nairobi to every corner of Kenya, your order arrives swiftly and safely.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-leaf icon-large" aria-hidden="true"></i>
+                    <h3>Ethically Sourced</h3>
+                    <p>We are committed to sustainable practices and fair labor across our supply chain.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-shield-alt icon-large" aria-hidden="true"></i>
+                    <h3>Secure Shopping</h3>
+                    <p>Your data and payments are protected with state-of-the-art encryption.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-by-style section-padding">
+            <h2>Shop by Your Style</h2>
+            <div class="style-grid">
+                <div class="style-item">
+                    <img src="https://via.placeholder.com/350x250/555555/FFFFFF?text=Boho+Chic" alt="Model wearing a bohemian style outfit">
+                    <h3>Boho Chic</h3>
+                    <a href="#" class="btn secondary-btn">Explore</a>
+                </div>
+                <div class="style-item">
+                    <img src="https://via.placeholder.com/350x250/777777/FFFFFF?text=Minimalist" alt="Clean and simple minimalist fashion">
+                    <h3>Minimalist</h3>
+                    <a href="#" class="btn secondary-btn">Explore</a>
+                </div>
+                <div class="style-item">
+                    <img src="https://via.placeholder.com/350x250/999999/FFFFFF?text=Athleisure" alt="Comfortable and stylish athleisure wear">
+                    <h3>Athleisure</h3>
+                    <a href="#" class="btn secondary-btn">Explore</a>
+                </div>
+                 <div class="style-item">
+                    <img src="https://via.placeholder.com/350x250/AAAAAA/FFFFFF?text=Formal+Wear" alt="Elegant formal wear for events">
+                    <h3>Formal Wear</h3>
+                    <a href="#" class="btn secondary-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-products section-padding">
+            <h2>Our Bestsellers</h2>
+            <div class="product-grid">
+                <div class="product-card" role="article" aria-labelledby="popProduct1Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/6A5ACD/FFFFFF?text=Popular+Item+1" alt="Image of the bestselling product: High-Waist Skinny Jeans">
+                    </a>
+                    <h3 id="popProduct1Title">High-Waist Skinny Jeans</h3>
+                    <p class="price">KSh 3,800</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add High-Waist Skinny Jeans to cart">Add to Cart</button>
+                </div>
+                <div class="product-card" role="article" aria-labelledby="popProduct2Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/87CEEB/FFFFFF?text=Popular+Item+2" alt="Image of the bestselling product: Men's Casual Polo">
+                    </a>
+                    <h3 id="popProduct2Title">Men's Casual Polo</h3>
+                    <p class="price">KSh 2,500</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Men's Casual Polo to cart">Add to Cart</button>
+                </div>
+                 <div class="product-card" role="article" aria-labelledby="popProduct3Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/CD853F/FFFFFF?text=Popular+Item+3" alt="Image of the bestselling product: Statement Necklace">
+                    </a>
+                    <h3 id="popProduct3Title">Statement Necklace</h3>
+                    <p class="price">KSh 1,200</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Statement Necklace to cart">Add to Cart</button>
+                </div>
+                 <div class="product-card" role="article" aria-labelledby="popProduct4Title">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x400/DDA0DD/FFFFFF?text=Popular+Item+4" alt="Image of the bestselling product: Flowy Maxi Skirt">
+                    </a>
+                    <h3 id="popProduct4Title">Flowy Maxi Skirt</h3>
+                    <p class="price">KSh 3,000</p>
+                    <button class="btn add-to-cart-btn-small" aria-label="Add Flowy Maxi Skirt to cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn primary-btn large-btn">Shop All Bestsellers</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Kenzeuz Trends</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" aria-label="Follow us on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" aria-label="Connect with us on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                </div>
+                <p class="newsletter-text-footer">Join the Kenzeuz Tribe for exclusive offers!</p>
+                <form class="newsletter-form-footer" aria-label="Footer Newsletter Subscription Form">
+                    <label for="newsletterEmailFooter" class="sr-only">Your email address (Footer)</label>
+                    <input type="e
